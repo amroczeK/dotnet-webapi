@@ -9,9 +9,9 @@ namespace dotnet_webapi.Repositories
     {
         private readonly List<Item> items = new()
         {
-            new Item { Id= Guid.NewGuid(), Name = "Potion", Price = 9, CreatedDate = DateTimeOffset.UtcNow},
-            new Item { Id= Guid.NewGuid(), Name = "Iron Sword", Price = 19, CreatedDate = DateTimeOffset.UtcNow},
-            new Item { Id= Guid.NewGuid(), Name = "Bronze Shield", Price = 15, CreatedDate = DateTimeOffset.UtcNow}
+            new Item { Id = Guid.NewGuid(), Name = "Potion", Price = 9, CreatedDate = DateTimeOffset.UtcNow},
+            new Item { Id = Guid.NewGuid(), Name = "Iron Sword", Price = 19, CreatedDate = DateTimeOffset.UtcNow},
+            new Item { Id = Guid.NewGuid(), Name = "Bronze Shield", Price = 15, CreatedDate = DateTimeOffset.UtcNow}
         };
 
         public IEnumerable<Item> GetItems()
