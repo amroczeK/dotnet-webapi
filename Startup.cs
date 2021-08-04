@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using dotnet_webapi.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -26,6 +27,9 @@ namespace dotnet_webapi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // Singleton: One copy of the instance of a type across the entire lifetime of service
+            // Only one will be created and re-used whenever it's needed
+            services.AddSingleton<IItemsRepository, InMemoryItemsRepository>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
