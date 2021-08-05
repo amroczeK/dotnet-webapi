@@ -1,17 +1,18 @@
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using dotnet_webapi.Models;
 
 namespace dotnet_webapi.Repositories
 {
     public interface IItemsRepository
     {
-        Item GetItemAsync(Guid id);
-        IEnumerable<Item> GetItemsAsync();
+        Task<Item> GetItemAsync(Guid id);
+        Task<IEnumerable<Item>> GetItemsAsync();
 
-        void CreateItemAsync(Item item);
-        void UpdateItemAsync(Item item);
+        Task CreateItemAsync(Item item);
+        Task UpdateItemAsync(Item item);
 
-        void DeleteItemAsync(Guid id);
+        Task DeleteItemAsync(Guid id);
     }
 }
