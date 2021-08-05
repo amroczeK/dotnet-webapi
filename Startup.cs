@@ -44,7 +44,11 @@ namespace dotnet_webapi
             // Only one will be created and re-used whenever it's needed
             services.AddSingleton<IItemsRepository, MongoDbItemsRepository>();
 
-            services.AddControllers();
+            services.AddControllers(options => {
+                // Resolves System.InvalidOperationException: No route matches the supplied values.
+                // Because .NET removes the word Async from methods at runtime e.g. GetItemAsync becomes GetItem
+                options.SuppressAsyncSuffixInActionNames = false;
+            });
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "dotnet_webapi", Version = "v1" });

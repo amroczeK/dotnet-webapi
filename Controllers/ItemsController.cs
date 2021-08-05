@@ -54,7 +54,7 @@ namespace dotnet_webapi.Controllers
 
             await repository.CreateItemAsync(item);
 
-            return CreatedAtAction(nameof(GetItemsAsync), new {id = item.Id}, item.AsDto());
+            return CreatedAtAction(nameof(GetItemAsync), new {id = item.Id}, item.AsDto());
         }
 
         // PUT /items/{id}
