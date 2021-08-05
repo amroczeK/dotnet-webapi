@@ -6,12 +6,12 @@ namespace dotnet_webapi.Repositories
 {
     public interface IItemsRepository
     {
-        Item GetItem(Guid id);
-        IEnumerable<Item> GetItems();
+        Item GetItemAsync(Guid id);
+        IEnumerable<Item> GetItemsAsync();
 
-        void CreateItem(Item item);
-        void UpdateItem(Item item);
+        void CreateItemAsync(Item item);
+        void UpdateItemAsync(Item item);
 
-        void DeleteItem(Guid id);
+        void DeleteItemAsync(Guid id);
     }
 }
