@@ -956,13 +956,14 @@
       "outputPath": "/Users/amroczek/Dev/Projects/Personal/dotnet-webapi/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/amroczek/.nuget/NuGet/NuGet.Config"
+        "/Users/amroczek/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://pkgs.dev.azure.com/telstradx/77f90b36-785d-4813-a9d2-4b12691611a5/_packaging/DataHub/nuget/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
